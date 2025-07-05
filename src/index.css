@@ -114,7 +114,23 @@ html {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
 }
+@keyframes smoothMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
+@keyframes fastMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-smoothMarquee {
+  animation: smoothMarquee 30s linear infinite;
+}
+
+.animate-fastMarquee {
+  animation: fastMarquee 15s linear infinite; /* Twice as fast on mobile */
+}
 .animate-smoothMarquee {
   animation: smoothMarquee 60s linear infinite;
 }

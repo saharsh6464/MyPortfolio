@@ -22,7 +22,9 @@ export default function HorizontalCarousel() {
       </div>
 
       <div className="w-full overflow-hidden bg-transparent py-8">
-        <div className="whitespace-nowrap flex animate-smoothMarquee gap-6">
+        <div className={`whitespace-nowrap flex ${
+          window.innerWidth < 768 ? 'animate-fastMarquee' : 'animate-smoothMarquee'
+        } gap-6`}>
           {imageList.map((src, index) => (
             <img
               key={index}
